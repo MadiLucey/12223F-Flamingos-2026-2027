@@ -182,14 +182,14 @@ void autonomous(void) {
   Claw.spin(forward);
   arm.spin(forward);
   // Drive away from the starting point
-  Left_Front.spinFor(forward, 25.3, turns);
-  Right_Front.spinFor(forward, 25.3, turns);
-  Right_Back.spinFor(forward, 25.3, turns);
+  Left_Front.spinFor(forward, 25.3, turns, false);
+  Right_Front.spinFor(forward, 25.3, turns, false);
+  Right_Back.spinFor(forward, 25.3, turns, false);
   Left_Back.spinFor(forward, 25.3, turns);
   // Turn Left
-  Left_Front.spinFor(forward, 1, turns);
-  Left_Back.spinFor(forward, 1, turns);
-  Right_Front.spinFor(reverse, 1, turns);
+  Left_Front.spinFor(forward, 1, turns, false);
+  Left_Back.spinFor(forward, 1, turns, false);
+  Right_Front.spinFor(reverse, 1, turns, false);
   Right_Back.spinFor(reverse, 1, turns);
   // Drive to goal
   Left_Front.spinFor(forward, 25.3, turns, false); // dont wait
@@ -200,14 +200,14 @@ void autonomous(void) {
   Claw.spin(reverse);
   arm.spin(reverse);
   // Reverse from goal
-  Left_Front.spinFor(reverse, 25.3, turns);
-  Right_Front.spinFor(reverse, 25.3, turns);
-  Left_Back.spinFor(reverse, 25.3, turns);
+  Left_Front.spinFor(reverse, 25.3, turns), false;
+  Right_Front.spinFor(reverse, 25.3, turns, false);
+  Left_Back.spinFor(reverse, 25.3, turns, false);
   Right_Back.spinFor(reverse, 25.3, turns);
   // Turn left to be facing the wall
-  Left_Front.spinFor(forward, 1, turns);
-  Left_Back.spinFor(forward, 1, turns);
-  Right_Front.spinFor(reverse, 1, turns);
+  Left_Front.spinFor(forward, 1, turns, false);
+  Left_Back.spinFor(forward, 1, turns, false);
+  Right_Front.spinFor(reverse, 1, turns, false);
   Right_Back.spinFor(reverse, 1, turns);
   // Drive to colour switcher thingy
   Left_Front.spinFor(forward, 25.3, turns, false);
