@@ -204,16 +204,6 @@ void autonomous(void) {
   Right_Front.spinFor(reverse, 25.3, turns, false);
   Left_Back.spinFor(reverse, 25.3, turns, false);
   Right_Back.spinFor(reverse, 25.3, turns);
-  // Turn left to be facing the wall
-  Left_Front.spinFor(forward, 1, turns, false);
-  Left_Back.spinFor(forward, 1, turns, false);
-  Right_Front.spinFor(reverse, 1, turns, false);
-  Right_Back.spinFor(reverse, 1, turns);
-  // Drive to colour switcher thingy
-  Left_Front.spinFor(forward, 25.3, turns, false);
-  Right_Front.spinFor(forward, 25.3, turns, false);
-  Right_Back.spinFor(forward, 25.3, turns, false);
-  Left_Back.spinFor(forward, 25.3, turns, false);
 }
 
 // DRIVER CONTROL
